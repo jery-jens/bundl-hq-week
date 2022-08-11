@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    /**
+     * Paginate
+     */
+
     const previous = document.querySelector(".top");
     const next = document.querySelector(".bottom");
     const days = document.querySelectorAll(".day");
@@ -43,5 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 };
             };
         };
+    });
+
+    /**
+     * Event popup
+     */
+
+    const events = document.querySelectorAll(".event-item");
+    const popups = document.querySelectorAll(".popup-content");
+
+    events.forEach((item) => {
+        item.addEventListener("click", () => {
+            const itemId = item.id;
+        
+            popups.forEach((popup) => {
+                const popupId = popup.querySelector(".popup-id").innerHTML;
+
+                console.log(popupId, itemId);
+            });
+        });
     });
 });
