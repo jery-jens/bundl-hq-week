@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
      */
 
     const events = document.querySelectorAll(".event-item");
-    const popups = document.querySelectorAll(".popup-content");
+    const popups = document.querySelectorAll(".popup");
 
     events.forEach((item) => {
         item.addEventListener("click", () => {
@@ -63,7 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
             popups.forEach((popup) => {
                 const popupId = popup.querySelector(".popup-id").innerHTML;
 
-                console.log(popupId, itemId);
+                if (popupId === itemId) {
+                    popup.style.display = "flex";
+                };
             });
         });
     });
