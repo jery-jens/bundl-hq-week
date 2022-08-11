@@ -69,4 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
+    popups.forEach((popup) => {
+        popup.querySelector(".close").addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+    });
 });
