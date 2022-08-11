@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (dayIndex !== 0) {
             dayIndex = dayIndex - 1;
 
+            if (dayIndex === 0) {
+                previous.classList.add("disabled");
+            } else {
+                previous.classList.remove("disabled");
+            };
+
             for (let i = 0; i < days.length; i++) {
                 if (dayIndex === i) {
                     days[i].classList.remove("hidden");
@@ -22,6 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
     next.addEventListener("click", () => {
         if (dayIndex !== 4) {
             dayIndex = dayIndex + 1;
+
+            if (dayIndex === 4) {
+                next.classList.add("disabled");
+            };
             
             for (let i = 0; i < days.length; i++) {
                 if (dayIndex === i) {
