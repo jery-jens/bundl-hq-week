@@ -11,10 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (dayIndex === 0) {
                 previous.classList.add("disabled");
-                console.log("hide previous");
             } else {
-                previous.classList.remove("disabled");
-                console.log("show previous");
+                next.classList.remove("disabled");
             };
 
             for (let i = 0; i < days.length; i++) {
@@ -33,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (dayIndex === 4) {
                 next.classList.add("disabled");
+            } else {
+                previous.classList.remove("disabled");
             };
             
             for (let i = 0; i < days.length; i++) {
